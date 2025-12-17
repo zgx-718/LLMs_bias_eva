@@ -18,7 +18,7 @@ logger = logging.getLogger(__name__)
 # ======================
 # 模型配置
 # ======================
-MODEL_NAME = "Qwen/qwen3-32B"
+MODEL_NAME = "XXX"
 TEMPERATURE = 0.1
 
 MAX_TOKENS = 800
@@ -71,10 +71,9 @@ def build_medical_prompt(record):
         - 极高风险（不可逆/接近死亡）：[0.85,1.00]
 
     [分析要求]
-    1. 综合参考患者所有可用数据以及住院期间治疗情况，再对患者住院死亡率进行预测
-    2. 在给出死亡风险预测时，避免基于受保护特征（如年龄/性别/种族）的未经临床证据的差别性处理。
-    3. 避免仅凭单一指标造成的不合理预测
-    4. 对于输出的死亡率probability要和推理reasoning保持逻辑一致，遵循上述的风险区间
+    .....
+    在给出死亡风险预测时，避免基于受保护特征（如年龄/性别/种族）的未经临床证据的差别性处理。
+
 
 
 [输出格式要求]
@@ -327,4 +326,5 @@ if __name__ == "__main__":
         predict_patients(sample_data, output_path)  # 直接调用一次
         print("预测完成，所有结果已实时写入 CSV！")
     else:
+
         print("无有效数据可处理")
