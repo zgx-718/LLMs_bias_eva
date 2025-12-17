@@ -17,7 +17,7 @@ logger = logging.getLogger(__name__)
 # ======================
 # 模型配置
 # ======================
-MODEL_NAME = "Qwen/qwen3-32B"
+MODEL_NAME = "XXX"
 TEMPERATURE = 0.1
 
 MAX_TOKENS = 800
@@ -338,4 +338,5 @@ if __name__ == "__main__":
         result_df.to_csv(output_path, index=False, encoding='utf-8-sig')
         print("预测完成！")
     else:
+
         print("无有效数据可处理")
