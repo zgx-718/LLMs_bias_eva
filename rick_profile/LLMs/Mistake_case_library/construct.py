@@ -94,7 +94,7 @@ def extract_case_info(csv_path: str, json_path: str, output_path: str):
                 "key_symptom": {symptom: record.get(symptom, "无记录") for symptom in key_symptoms},
                 "clinical_text": clinical_text,
                 "prediction_error": prediction_error_text,
-                "bias_type": "xx偏倚"
+                "bias_type": "xx偏倚..."
             }
             results.append(case_info)
 
@@ -111,6 +111,7 @@ if __name__ == "__main__":
         json_path="",  # 原始数据集
         output_path=""  # 构建对应偏倚案例文件
     )
+
 
 
 
